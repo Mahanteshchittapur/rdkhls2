@@ -8,6 +8,17 @@
     <!-- <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script> -->
     <!-- Add hls.js library -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+     <script>
+    
+        function playVideo() {
+            var url = "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8";
+            var player;
+            window.onload = function() {
+            player = new AAMPMediaPlayer();
+                player.load(url);
+            }
+        }
+    </script>
 
 
 </head>
@@ -58,8 +69,8 @@
 
     <div class="video-card-container">
         <div class="video-card video-container">
-            <video id="videoPlayer" class="dash-video" autoplay muted></video>
-            <button id="playButton" class="play-button">Play</button>
+<!--             <video id="videoPlayer" class="dash-video" autoplay muted></video> -->
+            <button onclick="playVideo()" id="playButton" class="play-button">Play</button>
         </div>
 
 
@@ -110,6 +121,6 @@
     
     <script src="./app.js"></script>
     <script src="./data.js"></script>
-    <script src="./player.js"></script>
+<!--     <script src="./player.js"></script> -->
 </body>
 </html>
