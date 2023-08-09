@@ -13,6 +13,9 @@
             playButton.addEventListener("click", playVideo);
     
         function playVideo() {
+             var movieTitle = document.querySelector(".movie-title");
+                if (movieTitle) {
+                    movieTitle.style.color = "red";
            
             window.onload = function() {
                  var url = "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8";
