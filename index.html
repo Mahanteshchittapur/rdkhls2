@@ -4,36 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RDK TV UI</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script> -->
-    <!-- Add hls.js library -->
-<!--     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script> -->
-     <script>
-        var player;
+     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
 
+        #container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: white;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+       video {
+            max-width: 100%;
+            height: auto;
+            display: none;
+        }
+    </style>
+     <script>
+        var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
         window.onload = function() {
             player = new AAMPMediaPlayer();
-            var movieTitle = document.querySelector(".movie-title");
-
-            document.addEventListener("keydown", function(event) {
-                if (event.key === "Enter") {
-                    playVideo();
-                    movieTitle.style.color = "blue"; // Change color to blue
-                }
-            });
-
-            document.getElementById("playButton").addEventListener("click", function() {
-                playVideo();
-                movieTitle.style.color = "blue"; // Change color to blue
-            });
         }
 
-        function playVideo() {
-            var url = "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8";
-            if (player) {
-                player.load(url);
+           function loadAAMPVideo() {
+            var video = document.getElementById("video");
+            video.src = url;
+            video.play();
+            video.style.display = "block";
+            
+           
+        }
+
+        document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 13) { // Enter key
+                loadAAMPVideo();
             }
-        }
+        });
+      
     </script>
 
 
@@ -89,16 +116,12 @@
                <button id="playButton" class="play-button">Play</button> -->
         </div>
          
-    </div>
 
-
-    </div>
 
    
     
     <script src="./app.js"></script>
     <script src="./data.js"></script>
-<!--     <script src="./player.js"></script> -->
 </body>
 </html>
 
