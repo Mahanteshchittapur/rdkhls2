@@ -3,6 +3,15 @@
     margin: 0;
     box-sizing: border-box;
 }
+.body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
 
 body {
     position: relative;
@@ -30,10 +39,32 @@ body {
     opacity: 0.9;
     z-index: 9;
 }
+.container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: white;
+        }
 
 .logo {
     height: 3rem;
 }
+.button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+.button:focus {
+            outline: none;
+        }
+. video {
+            max-width: 100%;
+            height: auto;
+            display: none;
+        }
 
 .google {
     
@@ -205,7 +236,7 @@ body {
    height: auto;
 }
 
-.play-button {
+/* .play-button {
    position: absolute;
    top: 50%;
    left: 50%;
@@ -216,7 +247,7 @@ body {
    font-size: 16px;
    border: none;
    cursor: pointer;
-}
+} */
 
 
  .video-card {
