@@ -215,14 +215,19 @@ body {
  }
 
  .video-card-container {
-    position: relative;
+     text-align: center;
+     padding: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+/*     position: relative;
     width: 92%;
     margin: auto;
     height: 10vw;
     display: flex;
     margin-top: 1rem;
     margin-bottom: 20px;
-    justify-content: space-between;
+    justify-content: space-between; */
+     
  }
 
  /* .video-container {
@@ -231,11 +236,11 @@ body {
    margin: 0 auto;
 } */
 
-.dash-video {
+/* .dash-video {
    width: 100%;
    height: auto;
 }
-
+ */
 /* .play-button {
    position: absolute;
    top: 50%;
@@ -393,7 +398,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
  }
 
- .pre-btn,
+/*  .pre-btn,
  .nxt-btn {
     position: absolute;
     top: 0;
@@ -425,6 +430,6 @@ body {
  .pre-btn:hover img,
  .nxt-btn:hover img {
     opacity: 1;
- }
+ } */
 
  
